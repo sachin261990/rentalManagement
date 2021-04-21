@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-sm bg-info">
+  
+    <ul class="navbar-nav">
+      <h4>RENTEL MANAGEMENT SYSTEM</h4>
+    </ul>
+    <button mat-button  [matMenuTriggerFor]="main_menu">Select Location</button>
+    <!-- sub-menu -->
+    <mat-menu #main_menu="matMenu">
+      <ng-container *ngFor="let mainItem of catalogData">
+        <button mat-menu-item [matMenuTriggerFor]="sub_menu" >{{ mainItem.name }}</button>
+        <mat-menu #sub_menu="matMenu">
+           <button *ngFor="let subItem of mainItem.branches" mat-menu-item (click)="selectMenuItem(mainItem.dealers_id,subItem.branch_id)">{{ subItem.name }}</button>
+        </mat-menu>
+      </ng-container>
+    </mat-menu>
+  </nav>

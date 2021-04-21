@@ -1,0 +1,23 @@
+  <div class="containWrapper">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item" (click)="goBack()"><a style="cursor:pointer;">Equipment Catalog</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Library</li>
+      </ol>
+    </nav>
+    <div class="container">
+      <div class="row">
+          <div class="col-4" *ngFor="let categories of subCategoriesData['subcategories']">
+              <mat-card class="example-card">
+                  <mat-card-header>
+                  </mat-card-header>
+                  <img mat-card-image src='{{ "../../../../../../assets/images/category/subCategory/" + categories.image }}' alt="Photo of a Shiba Inu">
+                  <mat-card-actions >
+                    <button mat-button>{{categories.name}}</button>
+                  </mat-card-actions>
+                </mat-card>
+          </div>
+      </div>
+      </div>
+  </div>
+  

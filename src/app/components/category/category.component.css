@@ -1,0 +1,9 @@
+.example-card {
+  max-width: 400px;
+  height: 425px;
+}
+.containWrapper{
+  height: calc(100% - 115px);
+    overflow: auto;
+    margin-bottom: 20px;
+}
